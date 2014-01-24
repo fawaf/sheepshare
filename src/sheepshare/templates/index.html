@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>sheepShare</title>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="content">
+				<h1>sheepShare</h1>
+				<p>sadf kasjdhf lkjdh ksdhf kljashdf kjlagsdlfkjg asdlkjfhaslkjfjklasdhf lkjashdfjklasdhflkjashd</p>
+
+				<form>
+					<p><input type="file" name="file" /></p>
+					<p>Expiration:</p>
+					<p>
+						<select name="minutes">
+							{% for time in minutes %}
+								<option value="{{ time }}">{{ time }} minutes</option>
+							{% endfor %}
+						</select>
+
+						<select name="hours">
+							{% for time in hours %}
+								<option value="{{ time }}">{{ time }} hours</option>
+							{% endfor %}
+						</select>
+
+						<select name="days">
+							{% for time in days %}
+								<option value="{{ time }}">{{ time }} days</option>
+							{% endfor %}
+						</select>
+					<p><input type="submit" value="Upload File" /></p>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
