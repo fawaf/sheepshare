@@ -9,4 +9,7 @@ $(document).ready(function() {
 			$("#container").css("background-color", "#E8C387");
 		}
 	});
+	$("#addFile").click(function() {
+		$("<p><input type=\"file\" name=\"file\" /></p>").appendTo($("#files"));
+	});
 });

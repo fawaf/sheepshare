@@ -17,7 +17,9 @@
 				<input type="button" name="sheep" id="test" value="baah" />
 				<form method="POST" action="/upload" enctype="multipart/form-data">
 					{% csrf_token %}
-					<p><input type="file" name="file" /></p>
+					<div id="files">
+						<p><input type="file" name="file" /></p>
+					</div>
 					<p><input type="button" id="addFile" value="Add File" /></p>
 					<p>Expiration:</p>
 					<p>
