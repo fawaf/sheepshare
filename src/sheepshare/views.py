@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse
-from django.shortcuts import render 
+from django.shortcuts import render, redirect
 
 def home(request):
 	params = {
@@ -9,3 +9,8 @@ def home(request):
 	}
 
 	return render(request, "index.html", params)
+
+def upload(request):
+	file_list = request.FILES.getlist("file")
+
+	return redirect("/")
